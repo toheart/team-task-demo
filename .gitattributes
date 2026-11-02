@@ -1,0 +1,14 @@
+# 统一以 LF 存入仓库并在检出时保持 LF。
+# 缺少本文件时，Windows 上 core.autocrlf=true 会让 Go 文件以 CRLF 检出，
+# 导致 gofmt -l 列出全部文件、golangci-lint fmt 首跑改写整个仓库。
+* text=auto eol=lf
+
+# 二进制文件不做行尾转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

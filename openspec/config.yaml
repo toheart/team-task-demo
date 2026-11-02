@@ -1,0 +1,10 @@
+schema: spec-driven-custom
+
+context: |
+  Project: Team Task Demo
+  Module: github.com/toheart/team-task-demo/backend
+  Tech stack: Go (Gin + Cobra + Viper + slog), React 19 (TypeScript + Vite)
+  Architecture: DDD (domain / application / interfaces / infrastructure)
+  API style: RESTful JSON, /api/v1/ prefix, unified {code, message, data} envelope
+  Conventional commits required
+  Backend port: 8080, Frontend dev port: 3000
