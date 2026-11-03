@@ -2,8 +2,8 @@
 
 ## 前置条件
 
-- Go 1.23+
-- Node.js 18+
+- Go 1.25.0 或能够获取对应版本的 Go 工具链，以 `backend/go.mod` 为准
+- Node.js 22.12+（课程采用版本）
 - Python 3.10+（编排状态脚本与测试环境检查）
 - 你常用的 AI IDE（Cursor / Claude Code / Codex）
 
@@ -27,6 +27,8 @@ CLI 只问两个必填项：
 显示名、前端包名、环境变量前缀、后端 module 自动推导，确认后一步到位。
 
 ## Step 2: 启动开发
+
+首次启动前，先在 `frontend/` 执行 `npm ci`，再回到项目根目录。
 
 ```bash
 make dev

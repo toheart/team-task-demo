@@ -38,7 +38,7 @@ func TestServerSampleRoutes(t *testing.T) {
 	t.Run("healthz uses the shared response envelope", func(t *testing.T) {
 		t.Parallel()
 
-		request := httptest.NewRequest(http.MethodGet, "/healthz", nil)
+		request := httptest.NewRequestWithContext(t.Context(), http.MethodGet, "/healthz", nil)
 		recorder := httptest.NewRecorder()
 
 		server.server.Handler.ServeHTTP(recorder, request)
@@ -68,7 +68,7 @@ func TestServerSampleRoutes(t *testing.T) {
 	t.Run("sample route returns starter sample items", func(t *testing.T) {
 		t.Parallel()
 
-		request := httptest.NewRequest(http.MethodGet, "/api/v1/samples", nil)
+		request := httptest.NewRequestWithContext(t.Context(), http.MethodGet, "/api/v1/samples", nil)
 		recorder := httptest.NewRecorder()
 
 		server.server.Handler.ServeHTTP(recorder, request)
